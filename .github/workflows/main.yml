@@ -17,7 +17,9 @@ jobs:
           distribution: "temurin"
 
       - name: Build with Maven
-        run: mvn clean package -DskipTests
+        run: |
+          cd /home/runner/work/joao-rhoden-boilerplate-jav-sprng-boot-maven-docker-postgresql/joao-rhoden-boilerplate-jav-sprng-boot-maven-docker-postgresql
+          mvn clean package -DskipTests
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
